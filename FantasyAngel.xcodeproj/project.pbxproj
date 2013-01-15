@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20EBEE9416A600680069E908 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EBEE9316A600680069E908 /* UIKit.framework */; };
+		20EBEE9616A600680069E908 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EBEE9516A600680069E908 /* Foundation.framework */; };
+		20EBEE9816A600680069E908 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EBEE9716A600680069E908 /* CoreGraphics.framework */; };
+		20EBEE9E16A600680069E908 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20EBEE9C16A600680069E908 /* InfoPlist.strings */; };
+		20EBEEA016A600680069E908 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EBEE9F16A600680069E908 /* main.m */; };
+		20EBEEA416A600680069E908 /* FAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EBEEA316A600680069E908 /* FAAppDelegate.m */; };
+		20EBEEA616A600680069E908 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EBEEA516A600680069E908 /* Default.png */; };
+		20EBEEA816A600680069E908 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EBEEA716A600680069E908 /* Default@2x.png */; };
+		20EBEEAA16A600690069E908 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EBEEA916A600680069E908 /* Default-568h@2x.png */; };
+		20EBEEAD16A600690069E908 /* FAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EBEEAC16A600690069E908 /* FAViewController.m */; };
+		20EBEEBF16A6032E0069E908 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EBEEBB16A6032E0069E908 /* libTestFlight.a */; };
+		20EBEEC016A6032E0069E908 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 20EBEEBC16A6032E0069E908 /* README.md */; };
+		20EBEEC116A6032E0069E908 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 20EBEEBD16A6032E0069E908 /* release_notes.md */; };
+		20EBEEC316A603540069E908 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EBEEC216A603540069E908 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20EBEE8F16A600680069E908 /* FantasyAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20EBEE9316A600680069E908 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		20EBEE9516A600680069E908 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		20EBEE9716A600680069E908 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		20EBEE9B16A600680069E908 /* FantasyAngel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FantasyAngel-Info.plist"; path = "../FantasyAngel-Info.plist"; sourceTree = "<group>"; };
+		20EBEE9D16A600680069E908 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20EBEE9F16A600680069E908 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20EBEEA116A600680069E908 /* FantasyAngel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FantasyAngel-Prefix.pch"; path = "../FantasyAngel-Prefix.pch"; sourceTree = "<group>"; };
+		20EBEEA216A600680069E908 /* FAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAAppDelegate.h; sourceTree = "<group>"; };
+		20EBEEA316A600680069E908 /* FAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAAppDelegate.m; sourceTree = "<group>"; };
+		20EBEEA516A600680069E908 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		20EBEEA716A600680069E908 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		20EBEEA916A600680069E908 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		20EBEEAB16A600690069E908 /* FAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAViewController.h; sourceTree = "<group>"; };
+		20EBEEAC16A600690069E908 /* FAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAViewController.m; sourceTree = "<group>"; };
+		20EBEEBB16A6032E0069E908 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		20EBEEBC16A6032E0069E908 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		20EBEEBD16A6032E0069E908 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		20EBEEBE16A6032E0069E908 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		20EBEEC216A603540069E908 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20EBEE8C16A600680069E908 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EBEEC316A603540069E908 /* libz.dylib in Frameworks */,
+				20EBEE9416A600680069E908 /* UIKit.framework in Frameworks */,
+				20EBEE9616A600680069E908 /* Foundation.framework in Frameworks */,
+				20EBEE9816A600680069E908 /* CoreGraphics.framework in Frameworks */,
+				20EBEEBF16A6032E0069E908 /* libTestFlight.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20EBEE8416A600680069E908 = {
+			isa = PBXGroup;
+			children = (
+				20EBEE9916A600680069E908 /* FantasyAngel */,
+				20EBEE9216A600680069E908 /* Frameworks */,
+				20EBEE9016A600680069E908 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20EBEE9016A600680069E908 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20EBEE8F16A600680069E908 /* FantasyAngel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20EBEE9216A600680069E908 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20EBEE9316A600680069E908 /* UIKit.framework */,
+				20EBEE9516A600680069E908 /* Foundation.framework */,
+				20EBEE9716A600680069E908 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20EBEE9916A600680069E908 /* FantasyAngel */ = {
+			isa = PBXGroup;
+			children = (
+				20EBEEB616A602DD0069E908 /* Dependencies */,
+				20EBEEB716A602DD0069E908 /* Model */,
+				20EBEEB816A602DD0069E908 /* Resources */,
+				20EBEEB916A602DD0069E908 /* View Controllers */,
+				20EBEE9A16A600680069E908 /* Supporting Files */,
+			);
+			path = FantasyAngel;
+			sourceTree = "<group>";
+		};
+		20EBEE9A16A600680069E908 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20EBEEA116A600680069E908 /* FantasyAngel-Prefix.pch */,
+				20EBEE9B16A600680069E908 /* FantasyAngel-Info.plist */,
+				20EBEEA216A600680069E908 /* FAAppDelegate.h */,
+				20EBEEA316A600680069E908 /* FAAppDelegate.m */,
+				20EBEE9C16A600680069E908 /* InfoPlist.strings */,
+				20EBEE9F16A600680069E908 /* main.m */,
+				20EBEEA516A600680069E908 /* Default.png */,
+				20EBEEA716A600680069E908 /* Default@2x.png */,
+				20EBEEA916A600680069E908 /* Default-568h@2x.png */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20EBEEB616A602DD0069E908 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				20EBEEC216A603540069E908 /* libz.dylib */,
+				20EBEEBA16A6032E0069E908 /* TestFlightSDK1.1 */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		20EBEEB716A602DD0069E908 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20EBEEB816A602DD0069E908 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		20EBEEB916A602DD0069E908 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20EBEEAB16A600690069E908 /* FAViewController.h */,
+				20EBEEAC16A600690069E908 /* FAViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		20EBEEBA16A6032E0069E908 /* TestFlightSDK1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				20EBEEBB16A6032E0069E908 /* libTestFlight.a */,
+				20EBEEBC16A6032E0069E908 /* README.md */,
+				20EBEEBD16A6032E0069E908 /* release_notes.md */,
+				20EBEEBE16A6032E0069E908 /* TestFlight.h */,
+			);
+			path = TestFlightSDK1.1;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20EBEE8E16A600680069E908 /* FantasyAngel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20EBEEB316A600690069E908 /* Build configuration list for PBXNativeTarget "FantasyAngel" */;
+			buildPhases = (
+				20EBEE8B16A600680069E908 /* Sources */,
+				20EBEE8C16A600680069E908 /* Frameworks */,
+				20EBEE8D16A600680069E908 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FantasyAngel;
+			productName = FantasyAngel;
+			productReference = 20EBEE8F16A600680069E908 /* FantasyAngel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20EBEE8616A600680069E908 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FA;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = ProductX;
+			};
+			buildConfigurationList = 20EBEE8916A600680069E908 /* Build configuration list for PBXProject "FantasyAngel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 20EBEE8416A600680069E908;
+			productRefGroup = 20EBEE9016A600680069E908 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20EBEE8E16A600680069E908 /* FantasyAngel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20EBEE8D16A600680069E908 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EBEE9E16A600680069E908 /* InfoPlist.strings in Resources */,
+				20EBEEA616A600680069E908 /* Default.png in Resources */,
+				20EBEEA816A600680069E908 /* Default@2x.png in Resources */,
+				20EBEEAA16A600690069E908 /* Default-568h@2x.png in Resources */,
+				20EBEEC016A6032E0069E908 /* README.md in Resources */,
+				20EBEEC116A6032E0069E908 /* release_notes.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20EBEE8B16A600680069E908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EBEEA016A600680069E908 /* main.m in Sources */,
+				20EBEEA416A600680069E908 /* FAAppDelegate.m in Sources */,
+				20EBEEAD16A600690069E908 /* FAViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20EBEE9C16A600680069E908 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20EBEE9D16A600680069E908 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20EBEEB116A600690069E908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		20EBEEB216A600690069E908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20EBEEB416A600690069E908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasyAngel/FantasyAngel-Prefix.pch";
+				INFOPLIST_FILE = "FantasyAngel/FantasyAngel-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FantasyAngel/Dependencies/TestFlightSDK1.1\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		20EBEEB516A600690069E908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasyAngel/FantasyAngel-Prefix.pch";
+				INFOPLIST_FILE = "FantasyAngel/FantasyAngel-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FantasyAngel/Dependencies/TestFlightSDK1.1\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20EBEE8916A600680069E908 /* Build configuration list for PBXProject "FantasyAngel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20EBEEB116A600690069E908 /* Debug */,
+				20EBEEB216A600690069E908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20EBEEB316A600690069E908 /* Build configuration list for PBXNativeTarget "FantasyAngel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20EBEEB416A600690069E908 /* Debug */,
+				20EBEEB516A600690069E908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20EBEE8616A600680069E908 /* Project object */;
+}
