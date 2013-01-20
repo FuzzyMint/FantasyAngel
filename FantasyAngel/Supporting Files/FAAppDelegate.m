@@ -9,6 +9,9 @@
 #import "FAAppDelegate.h"
 
 #import "FAViewController.h"
+#import "FAStartup.h"
+#import "FAStartupListViewController.h"
+#import "FALoginViewController.h"
 
 #define TESTFLIGHT_TEAM_TOKEN @"d0efc0e53acc88ebd2cc5e8e39df7b13_MTc1NjU3MjAxMy0wMS0xNSAxNjozODoyMS4wNzY0Mzg"
 
@@ -18,12 +21,70 @@
 {
     [TestFlight takeOff:TESTFLIGHT_TEAM_TOKEN];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[FAViewController alloc] init];
-    self.window.rootViewController = self.viewController;
+    [self setupRestkit];
+    
+    FAStartupListViewController *startupListController = [[FAStartupListViewController alloc] init];
+    FALoginViewController *loginController = [[FALoginViewController alloc] init];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
+    UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:loginController];
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.window.rootViewController = loginController;
     [self.window makeKeyAndVisible];
+
     return YES;
+}
+
+- (void) setupRestkit
+{
+    RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    
+    //let AFNetworking manage the activity indicator
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+    // Initialize HTTPClient
+    NSURL *baseURL = [NSURL URLWithString:@"https://api.angel.co/1/"];
+    AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    //we want to work with JSON-Data
+    [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
+    
+    // Initialize RestKit
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    
+    // Setup our object mappings
+    /*RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[RKTUser class]];
+    [userMapping addAttributeMappingsFromDictionary:@{
+     @"id" : @"userID",
+     @"screen_name" : @"screenName",
+     @"name" : @"name"
+     }];*/
+    
+    RKObjectMapping *startupMapping = [RKObjectMapping mappingForClass:[FAStartup class]];
+    [startupMapping addAttributeMappingsFromDictionary:@{
+     @"id" : @"id",
+     @"name" : @"name",
+     @"high_concept" : @"high_concept",
+     @"product_desc" : @"product_desc",
+     @"logo_url" : @"logo_url",
+     @"thumb_url" : @"thumb_url",
+     }];
+    /*RKRelationshipMapping* relationShipMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"user"
+                                                                                             toKeyPath:@"user"
+                                                                                           withMapping:userMapping];
+    [statusMapping addPropertyMapping:relationShipMapping];*/
+    
+    // Update date format so that we can parse Twitter dates properly
+    // Wed Sep 29 15:31:08 +0000 2010
+    [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
+    
+    // Register our mappings with the provider using a response descriptor
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:startupMapping
+                                                                                       pathPattern:@"tags/1/startups"
+                                                                                           keyPath:@"startups"
+                                                                                       statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    [objectManager addResponseDescriptor:responseDescriptor];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
