@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2042480916AD96A10033B8DD /* FAResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2042480816AD96A10033B8DD /* FAResponseObject.m */; };
+		2042480D16ADA72D0033B8DD /* FAInvestmentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2042480C16ADA72D0033B8DD /* FAInvestmentListViewController.m */; };
+		2042481016ADA92C0033B8DD /* FAInvestmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2042480F16ADA92C0033B8DD /* FAInvestmentCell.m */; };
+		2050737A16ADECF000DD7569 /* FAPlayerBalancesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2050737916ADECF000DD7569 /* FAPlayerBalancesController.m */; };
+		2050737E16ADEDC500DD7569 /* FAPlayerBalanceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2050737D16ADEDC500DD7569 /* FAPlayerBalanceCell.m */; };
+		2099586016ADF50700473EF0 /* deals_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2099585D16ADF50700473EF0 /* deals_icon.png */; };
+		2099586116ADF50700473EF0 /* my_purchases_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2099585E16ADF50700473EF0 /* my_purchases_icon.png */; };
+		2099586216ADF50700473EF0 /* share_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2099585F16ADF50700473EF0 /* share_icon.png */; };
 		20EBEE9416A600680069E908 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EBEE9316A600680069E908 /* UIKit.framework */; };
 		20EBEE9616A600680069E908 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EBEE9516A600680069E908 /* Foundation.framework */; };
 		20EBEE9816A600680069E908 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EBEE9716A600680069E908 /* CoreGraphics.framework */; };
@@ -32,6 +40,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2042480716AD96A10033B8DD /* FAResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAResponseObject.h; sourceTree = "<group>"; };
+		2042480816AD96A10033B8DD /* FAResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAResponseObject.m; sourceTree = "<group>"; };
+		2042480B16ADA72D0033B8DD /* FAInvestmentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FAInvestmentListViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2042480C16ADA72D0033B8DD /* FAInvestmentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FAInvestmentListViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2042480E16ADA92C0033B8DD /* FAInvestmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAInvestmentCell.h; sourceTree = "<group>"; };
+		2042480F16ADA92C0033B8DD /* FAInvestmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAInvestmentCell.m; sourceTree = "<group>"; };
+		2050737816ADECEF00DD7569 /* FAPlayerBalancesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAPlayerBalancesController.h; sourceTree = "<group>"; };
+		2050737916ADECF000DD7569 /* FAPlayerBalancesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAPlayerBalancesController.m; sourceTree = "<group>"; };
+		2050737C16ADEDC500DD7569 /* FAPlayerBalanceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAPlayerBalanceCell.h; sourceTree = "<group>"; };
+		2050737D16ADEDC500DD7569 /* FAPlayerBalanceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAPlayerBalanceCell.m; sourceTree = "<group>"; };
+		2099585D16ADF50700473EF0 /* deals_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deals_icon.png; sourceTree = "<group>"; };
+		2099585E16ADF50700473EF0 /* my_purchases_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_purchases_icon.png; sourceTree = "<group>"; };
+		2099585F16ADF50700473EF0 /* share_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_icon.png; sourceTree = "<group>"; };
 		20EBEE8F16A600680069E908 /* FantasyAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20EBEE9316A600680069E908 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20EBEE9516A600680069E908 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,7 +62,7 @@
 		20EBEE9F16A600680069E908 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		20EBEEA116A600680069E908 /* FantasyAngel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FantasyAngel-Prefix.pch"; path = "../FantasyAngel-Prefix.pch"; sourceTree = "<group>"; };
 		20EBEEA216A600680069E908 /* FAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAAppDelegate.h; sourceTree = "<group>"; };
-		20EBEEA316A600680069E908 /* FAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAAppDelegate.m; sourceTree = "<group>"; };
+		20EBEEA316A600680069E908 /* FAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FAAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		20EBEEA516A600680069E908 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		20EBEEA716A600680069E908 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		20EBEEA916A600680069E908 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -153,6 +174,8 @@
 				20EBEF0816AA69AF0069E908 /* FAStartup.m */,
 				20EBEF0D16AA6BAB0069E908 /* FAInvestment.h */,
 				20EBEF0E16AA6BAB0069E908 /* FAInvestment.m */,
+				2042480716AD96A10033B8DD /* FAResponseObject.h */,
+				2042480816AD96A10033B8DD /* FAResponseObject.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +201,10 @@
 				20EBEF1A16ABA2A40069E908 /* FAStartupDetailController.m */,
 				20EBEF0A16AA6A390069E908 /* FAStartupListViewController.h */,
 				20EBEF0B16AA6A390069E908 /* FAStartupListViewController.m */,
+				2042480B16ADA72D0033B8DD /* FAInvestmentListViewController.h */,
+				2042480C16ADA72D0033B8DD /* FAInvestmentListViewController.m */,
+				2050737816ADECEF00DD7569 /* FAPlayerBalancesController.h */,
+				2050737916ADECF000DD7569 /* FAPlayerBalancesController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -195,6 +222,10 @@
 			children = (
 				20EBEF0416AA695C0069E908 /* FAStartupCell.h */,
 				20EBEF0516AA695C0069E908 /* FAStartupCell.m */,
+				2042480E16ADA92C0033B8DD /* FAInvestmentCell.h */,
+				2042480F16ADA92C0033B8DD /* FAInvestmentCell.m */,
+				2050737C16ADEDC500DD7569 /* FAPlayerBalanceCell.h */,
+				2050737D16ADEDC500DD7569 /* FAPlayerBalanceCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -202,6 +233,9 @@
 		20EBEF1016AA761F0069E908 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				2099585D16ADF50700473EF0 /* deals_icon.png */,
+				2099585E16ADF50700473EF0 /* my_purchases_icon.png */,
+				2099585F16ADF50700473EF0 /* share_icon.png */,
 				20EBEF1116AA762C0069E908 /* profile-image-placeholder.png */,
 				20EBEF1216AA762C0069E908 /* profile-image-placeholder@2x.png */,
 			);
@@ -267,6 +301,9 @@
 				20EBEEAA16A600690069E908 /* Default-568h@2x.png in Resources */,
 				20EBEF1316AA762C0069E908 /* profile-image-placeholder.png in Resources */,
 				20EBEF1416AA762C0069E908 /* profile-image-placeholder@2x.png in Resources */,
+				2099586016ADF50700473EF0 /* deals_icon.png in Resources */,
+				2099586116ADF50700473EF0 /* my_purchases_icon.png in Resources */,
+				2099586216ADF50700473EF0 /* share_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +342,11 @@
 				20EBEF0C16AA6A3A0069E908 /* FAStartupListViewController.m in Sources */,
 				20EBEF0F16AA6BAC0069E908 /* FAInvestment.m in Sources */,
 				20EBEF1B16ABA2A50069E908 /* FAStartupDetailController.m in Sources */,
+				2042480916AD96A10033B8DD /* FAResponseObject.m in Sources */,
+				2042480D16ADA72D0033B8DD /* FAInvestmentListViewController.m in Sources */,
+				2042481016ADA92C0033B8DD /* FAInvestmentCell.m in Sources */,
+				2050737A16ADECF000DD7569 /* FAPlayerBalancesController.m in Sources */,
+				2050737E16ADEDC500DD7569 /* FAPlayerBalanceCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,19 @@
 
 #import "FAViewController.h"
 #import "FAStartup.h"
+#import "FAInvestment.h"
+#import "FAUser.h"
 #import "FAStartupListViewController.h"
 #import "FALoginViewController.h"
+#import "FAInvestmentListViewController.h"
+#import "FAPlayerBalancesController.h"
+#import "FAHomeViewController.h"
 
 #define TESTFLIGHT_TEAM_TOKEN @"d0efc0e53acc88ebd2cc5e8e39df7b13_MTc1NjU3MjAxMy0wMS0xNSAxNjozODoyMS4wNzY0Mzg"
 
 @implementation FAAppDelegate
+
+@synthesize railsObjectManager = _railsObjectManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -23,14 +30,25 @@
     
     [self setupRestkit];
     
-    FAStartupListViewController *startupListController = [[FAStartupListViewController alloc] init];
-    FALoginViewController *loginController = [[FALoginViewController alloc] init];
+   
+    
     
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
-    UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:loginController];
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    self.window.rootViewController = loginController;
+    
+    // Uncomment to reset token (logout)
+    //[[NSUserDefaults standardUserDefaults] setObject: nil forKey: @"token"];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    
+    
+    FAHomeViewController *tabBarController = [[FAHomeViewController alloc] init];
+    self.window.rootViewController = tabBarController;
+    
+    
+    
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -47,11 +65,24 @@
     // Initialize HTTPClient
     NSURL *baseURL = [NSURL URLWithString:@"https://api.angel.co/1/"];
     AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
     //we want to work with JSON-Data
     [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
     
     // Initialize RestKit
     RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    
+    //-------------------------------Have to make a 2nd bogus one
+    
+        // Initialize HTTPClient
+    NSURL *localBaseURL = [NSURL URLWithString:@"http://localhost:3000"];
+    AFHTTPClient* localClient = [[AFHTTPClient alloc] initWithBaseURL:localBaseURL];
+    
+    //we want to work with JSON-Data
+    [localClient setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
+    
+    // Initialize RestKit
+    self.railsObjectManager = [[RKObjectManager alloc] initWithHTTPClient:localClient];
     
     // Setup our object mappings
     /*RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[RKTUser class]];
@@ -70,6 +101,20 @@
      @"logo_url" : @"logo_url",
      @"thumb_url" : @"thumb_url",
      }];
+    
+    RKObjectMapping *investmentMapping = [RKObjectMapping mappingForClass:[FAInvestment class]];
+    [investmentMapping addAttributeMappingsFromDictionary:@{
+     //@"startup_id" : @"startup_id",
+     @"amount" : @"amount",
+     }];
+    
+    RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[FAUser class]];
+    [userMapping addAttributeMappingsFromDictionary:@{
+     @"name" : @"name",
+     @"balance" : @"balance",
+     }];
+    
+    
     /*RKRelationshipMapping* relationShipMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"user"
                                                                                              toKeyPath:@"user"
                                                                                            withMapping:userMapping];
@@ -77,14 +122,28 @@
     
     // Update date format so that we can parse Twitter dates properly
     // Wed Sep 29 15:31:08 +0000 2010
-    [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
+    //[RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
     
     // Register our mappings with the provider using a response descriptor
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:startupMapping
+    RKResponseDescriptor *startupDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:startupMapping
                                                                                        pathPattern:@"tags/1/startups"
                                                                                            keyPath:@"startups"
                                                                                        statusCodes:[NSIndexSet indexSetWithIndex:200]];
-    [objectManager addResponseDescriptor:responseDescriptor];
+    
+    RKResponseDescriptor *investmentDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:investmentMapping
+                                                                                       pathPattern:@"/investments"
+                                                                                           keyPath:@"investments"
+                                                                                       statusCodes:[NSIndexSet indexSetWithIndex:200]];
+   
+    RKResponseDescriptor *userDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping
+                                                                                         pathPattern:@"/users"
+                                                                                             keyPath:@"users"
+                                                                                         statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    [objectManager addResponseDescriptor:startupDescriptor];
+    [self.railsObjectManager addResponseDescriptor:investmentDescriptor];
+    [self.railsObjectManager addResponseDescriptor:userDescriptor];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -1,0 +1,54 @@
+
+PODS:
+- AFNetworking (1.1.0)
+- RestKit (0.20.0pre6):
+  - RestKit/Core (= 0.20.0pre6)
+- RestKit/Core (0.20.0pre6):
+  - RestKit/CoreData
+  - RestKit/Network
+  - RestKit/ObjectMapping
+- RestKit/CoreData (0.20.0pre6)
+- RestKit/Network (0.20.0pre6):
+  - AFNetworking (= 1.1.0)
+  - RestKit/ObjectMapping
+  - RestKit/Support
+  - SOCKit
+- RestKit/ObjectMapping (0.20.0pre6)
+- RestKit/Search (0.20.0pre6):
+  - RestKit/CoreData
+- RestKit/Support (0.20.0pre6)
+- RestKit/Testing (0.20.0pre6)
+- SDWebImage (3.0):
+  - SDWebImage/Main (= 3.0)
+- SDWebImage/Main (3.0)
+- SOCKit (1.1)
+- TestFlightSDK (1.2)
+
+DEPENDENCIES:
+- RestKit (from `https://github.com/RestKit/RestKit.git', branch `development')
+- RestKit/Search (~> 0.20.0pre)
+- RestKit/Testing (~> 0.20.0pre)
+- SDWebImage (~> 3.0)
+- TestFlightSDK (~> 1.2)
+
+EXTERNAL SOURCES:
+  RestKit:
+    :git: https://github.com/RestKit/RestKit.git
+    :branch: development
+
+SPEC CHECKSUMS:
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  RestKit: 8f62889f7a186c2fd11e93413150906f6aef91d6
+  RestKit/Core: 8f62889f7a186c2fd11e93413150906f6aef91d6
+  RestKit/CoreData: 8f62889f7a186c2fd11e93413150906f6aef91d6
+  RestKit/Network: 8f62889f7a186c2fd11e93413150906f6aef91d6
+  RestKit/ObjectMapping: 8f62889f7a186c2fd11e93413150906f6aef91d6
+  RestKit/Search: 8f62889f7a186c2fd11e93413150906f6aef91d6
+  RestKit/Support: 8f62889f7a186c2fd11e93413150906f6aef91d6
+  RestKit/Testing: 8f62889f7a186c2fd11e93413150906f6aef91d6
+  SDWebImage: afa3965bcb37797ba4ecac49393897b99d1b4be7
+  SDWebImage/Main: afa3965bcb37797ba4ecac49393897b99d1b4be7
+  SOCKit: 179515c1a621dd5652a60e9be02ea4adcd25bc9b
+  TestFlightSDK: 29e194fb148e4861f92e4c1195b9697e1f3ad19a
+
+COCOAPODS: 0.16.1

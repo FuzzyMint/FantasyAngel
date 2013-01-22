@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) FAViewController *viewController;
 
+@property (nonatomic, strong) RKObjectManager *railsObjectManager;
+
 @end
